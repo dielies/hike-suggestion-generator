@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <title>Hike suggestion generator</title>
 </head>
@@ -25,24 +26,24 @@
             <form id="hike-generator-form">
                 <div>
                     <input type="text" placeholder="Enter the name of the country where you want to hike"
-                        class="country-input" required />
+                        class="country-input" id="country-input" required />
 
                 </div>
                 <div>
 
                     <select class="hike-length" id="hike-length">
                         <option value="">Select the length of the hike you want to do</option>
-                        <option value="0-5">0-5 km</option>
-                        <option value="5-10">5-10 km</option>
-                        <option value="10-20">10-20 km</option>
-                        <option value="20-30">20-30 km</option>
-                        <option value="30-50">30-50 km</option>
-                        <option value="50-100">50-100 km</option>
-                        <option value="100+">More than 100 km</option>
+                        <option value="0-5 km">0-5 km</option>
+                        <option value="5-10 km">5-10 km</option>
+                        <option value="10-20 km">10-20 km</option>
+                        <option value="20-30 km">20-30 km</option>
+                        <option value="30-50 km">30-50 km</option>
+                        <option value="50-100 km">50-100 km</option>
+                        <option value="more than 100 km">More than 100 km</option>
                     </select>
                 </div>
 
-                <div class="difficulty-selector">
+                <div class="difficulty-selector" id="difficulty">
                     <div>Desired difficulty level of the hike</div>
                     <br>
                     <div>
