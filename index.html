@@ -18,21 +18,21 @@
 
     <div class="container">
         <header>
-            <h1>Ready to go on a hike?</h1>
+            <h1>Find your next adventure</h1>
         </header>
 
         <main>
 
             <form id="hike-generator-form">
                 <div>
-                    <input type="text" placeholder="Enter the name of the country where you want to hike"
-                        class="country-input" id="country-input" required />
+                    <label for="country">Enter the name of the country where you want to hike</label>
+                    <input type="text" placeholder="i.e. France, Germany, USA" class="country-input" id="country-input"
+                        required />
 
                 </div>
                 <div>
-
+                    <label for="hike-length">Select the length of the hike you want to do</label>
                     <select class="hike-length" id="hike-length">
-                        <option value="">Select the length of the hike you want to do</option>
                         <option value="0-5 km">0-5 km</option>
                         <option value="5-10 km">5-10 km</option>
                         <option value="10-20 km">10-20 km</option>
@@ -65,7 +65,7 @@
 
             </form>
 
-            <div class="hike-suggestion" id="hike-suggestion"></div>
+            <div class="hike-suggestion hidden" id="hike-suggestion"></div>
 
         </main>
 

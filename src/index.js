@@ -1,5 +1,4 @@
 function displayHike(response) {
-  console.log("suggestion generated");
   new Typewriter("#hike-suggestion", {
     strings: response.data.answer,
     autoStart: true,
@@ -29,9 +28,9 @@ function generateHikeSuggestion(event) {
     "You are an accomplished hiker that has hiked all over the world. Your mission is to suggest a hike in a country anywhere in the world, with any length and any difficulty rate. Your answer should be maximum 4 sentences. Make sure to follow user instructions.";
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
-  console.log("Generating hike suggestion");
-  console.log(`Prompt: ${prompt}`);
-  console.log(`Context: ${context}`);
+  let hikeElement = document.querySelector("#hike-suggestion");
+  hikeElement.classList.remove("hidden");
+  hikeElement.innerHTML = `<div class="animation">🚶🏽‍♀️‍➡️🥾Generating an adventure in ${countryInput.value} for you 🚶🏽‍♀️‍➡️🥾</div>`;
 
   axios.get(apiUrl).then(displayHike);
 }

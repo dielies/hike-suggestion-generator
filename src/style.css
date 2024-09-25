@@ -11,6 +11,11 @@ a {
   color: #384938;
 }
 
+label {
+  padding: 10px;
+  margin: 20px 10px;
+}
+
 .container {
   margin: 120px auto;
   max-width: 600px;
@@ -39,6 +44,7 @@ form {
 
 .country-input {
   background-color: rgba(131, 226, 215, 0.5);
+  color: #384938;
   margin: 10px;
   padding: 16px;
   width: 90%;
@@ -109,6 +115,27 @@ form {
   background-color: rgb(131, 226, 215);
   border-radius: 20px;
   box-shadow: 20px 20px 15px rgba(106, 125, 115, 0.5);
+}
+
+.hidden {
+  display: none;
+}
+
+.animation {
+  animation: myAnim 5s ease 0s 10 normal forwards;
+}
+
+@keyframes myAnim {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0;
+  }
 }
 
 footer {
