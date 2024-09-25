@@ -4,56 +4,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/style.css">
     <title>Hike suggestion generator</title>
 </head>
 
 <body>
-    <header>
-        <h1>Ready to go on a hike?</h1>
-    </header>
 
-    <main>
-        <form>
-            <div>
-                <input type="text" placeholder="Enter the name of the country where you want to hike" autofocus
-                    required />
-                <input type="submit" />
-            </div>
-            <div>
-                <input type="text" placeholder="Enter the maximum length of the hike you want to do" />
-                <input type="submit" />
-            </div>
-            <div>Desired difficulty level of the hike</div>
-            <div>
-                <input type="radio" />
-                <label for="easy">Easy</label>
-            </div>
-            <div>
-                <input type="radio" />
-                <label for="average">Average</label>
-            </div>
-            <div>
-                <input type="radio" />
-                <label for="hard">Hard</label>
-            </div>
-            </div>
-            </div>
-        </form>
+    <div class="container">
+        <header>
+            <h1>Ready to go on a hike?</h1>
+        </header>
 
-        <div>hike suggestion will go here</div>
+        <main>
 
-    </main>
+            <form>
+                <div>
+                    <input type="text" placeholder="Enter the name of the country where you want to hike"
+                        class="country-input" required />
 
-    <footer>
-        This AI project was coded by
-        <a href="https://github.com/dielies" target="_blank">Lies Dieben</a>
-        and is
-        <a href="https://github.com/dielies/hike-suggestion-generator" target="_blank">open-sourced on GitHub</a>
-        and is <a href="https://hike-suggestion-generator.netlify.app/" target="_blank">hosted on Netlify</a>.
-    </footer>
+                </div>
+                <div>
 
-    <script src="src/index.js"></script>
+                    <select class="hike-length" id="hike-length">
+                        <option value="">Select the length of the hike you want to do</option>
+                        <option value="0-5">0-5 km</option>
+                        <option value="5-10">5-10 km</option>
+                        <option value="10-20">10-20 km</option>
+                        <option value="20-30">20-30 km</option>
+                        <option value="30-50">30-50 km</option>
+                        <option value="50-100">50-100 km</option>
+                        <option value="100+">More than 100 km</option>
+                    </select>
+                </div>
+
+                <div class="difficulty-selector">
+                    <div>Desired difficulty level of the hike</div>
+                    <br>
+                    <div>
+                        <input type="radio" id="easy-hike" name="radio-button" />
+                        <label for="easy">Easy</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="average-hike" name="radio-button" />
+                        <label for="average">Average</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="hard-hike" name="radio-button" />
+                        <label for="hard">Hard</label>
+
+                    </div>
+                </div>
+                <div><input type="submit" class="submit-button" /></div>
+
+
+            </form>
+
+            <div class="hike-suggestion">hike suggestion will go here</div>
+
+        </main>
+
+        <footer>
+            This AI project was coded by
+            <a href="https://github.com/dielies" target="_blank">Lies Dieben</a>
+            and is
+            <a href="https://github.com/dielies/hike-suggestion-generator" target="_blank">open-sourced on GitHub</a>
+            and is <a href="https://hike-suggestion-generator.netlify.app/" target="_blank">hosted on Netlify</a>.
+        </footer>
+    </div>
+
+    <script src="src/index.js">
+    </script>
 </body>
 
 </html>
